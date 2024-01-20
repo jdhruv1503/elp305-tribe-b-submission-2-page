@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>main</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<div class="titlepage">
+<p><img src="logo.png" style="width:30.0%" alt="image" />
+<span><strong>ELP305-Submission-02:<br />
+Cleaning Machine Requirements and Specifications</strong></span></p>
+<p><strong></strong> <em>Tribe B</em></p>
+</div>
+<h1 class="unnumbered" id="tribe-b-team-member-details">Tribe B Team
+Member Details</h1>
+<div id="tab:teamDetails">
+<table>
+<caption>Tribe Coordinator Details</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Entry No</th>
+<th style="text-align: center;">Email</th>
+<th style="text-align: center;">Role</th>
+<th style="text-align: center;"><span data-acronym-label="if"
+data-acronym-form="singular+abbrv">if</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Aditya Arya</td>
+<td style="text-align: center;">2021MT60958</td>
+<td style="text-align: center;"><a
+href="mailto:mt6210958@maths.iitd.ac.in">mt6210958@maths.iitd.ac.in</a></td>
+<td style="text-align: center;"><span data-acronym-label="tc"
+data-acronym-form="singular+abbrv">tc</span></td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ark Verma</td>
+<td style="text-align: center;">2021EE10783</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210783@ee.iitd.ac.in">ee1210783@ee.iitd.ac.in</a></td>
+<td style="text-align: center;"><span data-acronym-label="tc"
+data-acronym-form="singular+abbrv">tc</span></td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tab:teamDetails">
+<table>
+<caption>Design Team Members Details</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Entry No</th>
+<th style="text-align: center;">Email</th>
+<th style="text-align: center;">Role</th>
+<th style="text-align: center;"><span data-acronym-label="if"
+data-acronym-form="singular+abbrv">if</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Bhumi Gadhavi</td>
+<td style="text-align: center;">2021MT60950</td>
+<td style="text-align: center;"><a
+href="mailto:mt6210950@maths.iitd.ac.in">mt6210950@maths.iitd.ac.in</a></td>
+<td style="text-align: center;"><span data-acronym-label="ac"
+data-acronym-form="singular+abbrv">ac</span></td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tanmay Jhalani</td>
+<td style="text-align: center;">2021EE30389</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210389@ee.iitd.ac.in">ee3210389@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Shantanu Pandit</td>
+<td style="text-align: center;">2021MT10252</td>
+<td style="text-align: center;"><a
+href="mailto:mt1210252@maths.iitd.ac.in">mt1210252@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Advait Prashant Rege</td>
+<td style="text-align: center;">2021MT60946</td>
+<td style="text-align: center;"><a
+href="mailto:mt6210946@maths.iitd.ac.in">mt6210946@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Pramsu Shrivastava</td>
+<td style="text-align: center;">2021EE10140</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210140@ee.iitd.ac.in">ee1210140@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Parth Naikwad</td>
+<td style="text-align: center;">2021EE10672</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210672@ee.iitd.ac.in">ee1210672@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Yash Bafna</td>
+<td style="text-align: center;">2021EE10660</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210660@ee.iitd.ac.in">ee1210660@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Abhay Yadav</td>
+<td style="text-align: center;">2021EE10151</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210151@ee.iitd.ac.in">ee1210151@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ram Gopal Chaudhari</td>
+<td style="text-align: center;">2021EE10671</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210671@ee.iitd.ac.in">ee1210671@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Vivek Pratap Singh</td>
+<td style="text-align: center;">2021EE10687</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210687@ee.iitd.ac.in">ee1210687@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Shreya Gupta</td>
+<td style="text-align: center;">2021MT10906</td>
+<td style="text-align: center;"><a
+href="mailto:mt1210906@maths.iitd.ac.in">mt1210906@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Vaibhav</td>
+<td style="text-align: center;">2021EE10641</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210641@ee.iitd.ac.in">ee1210641@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Devanshu Ataria</td>
+<td style="text-align: center;">2021EE10162</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210162@ee.iitd.ac.in">ee1210162@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Anmol Bansal</td>
+<td style="text-align: center;">2021EE10643</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210643@ee.iitd.ac.in">ee1210643@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Vedant Patel</td>
+<td style="text-align: center;">2020EE10520</td>
+<td style="text-align: center;"><a
+href="mailto:ee1200520@ee.iitd.ac.in">ee1200520@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aditi Srivastava</td>
+<td style="text-align: center;">2021MT10228</td>
+<td style="text-align: center;"><a
+href="mailto:mt1210228@maths.iitd.ac.in">mt1210228@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Anusha Kedawat</td>
+<td style="text-align: center;">2021EE30718</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210718@ee.iitd.ac.in">ee3210718@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Manan Singal</td>
+<td style="text-align: center;">2021EE10138</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210138@ee.iitd.ac.in">ee1210138@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tab:teamDetails">
+<table>
+<caption>Documentation Team Members Details</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Entry No</th>
+<th style="text-align: center;">Email</th>
+<th style="text-align: center;">Role</th>
+<th style="text-align: center;"><span data-acronym-label="if"
+data-acronym-form="singular+abbrv">if</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Shourya Vir Jain</td>
+<td style="text-align: center;">2022EE31798</td>
+<td style="text-align: center;"><a
+href="mailto:ee3221798@ee.iitd.ac.in">ee3221798@ee.iitd.ac.in</a></td>
+<td style="text-align: center;"><span data-acronym-label="ac"
+data-acronym-form="singular+abbrv">ac</span></td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">S Anuj Karthik</td>
+<td style="text-align: center;">2021EE10667</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210667@ee.iitd.ac.in">ee1210667@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Shreya Singla</td>
+<td style="text-align: center;">2020EE10671</td>
+<td style="text-align: center;"><a
+href="mailto:ee1200671@ee.iitd.ac.in">ee1200671@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Gourab Raj Sabat</td>
+<td style="text-align: center;">2022EE11675</td>
+<td style="text-align: center;"><a
+href="mailto:ee1221675@ee.iitd.ac.in">ee1221675@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ashi Veerman</td>
+<td style="text-align: center;">2021MT10241</td>
+<td style="text-align: center;"><a
+href="mailto:mt1210241@maths.iitd.ac.in">mt1210241@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Bhargab Sonowal</td>
+<td style="text-align: center;">2021MT10937</td>
+<td style="text-align: center;"><a
+href="mailto:mt1210937@maths.iitd.ac.in">mt1210937@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Rakshitha</td>
+<td style="text-align: center;">2021MT10904</td>
+<td style="text-align: center;"><a
+href="mailto:mt1210904@maths.iitd.ac.in">mt1210904@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sanju N S</td>
+<td style="text-align: center;">2021EE30732</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210732@ee.iitd.ac.in">ee3210732@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Dhruv Joshi</td>
+<td style="text-align: center;">2022EE32079</td>
+<td style="text-align: center;"><a
+href="mailto:ee3222079@ee.iitd.ac.in">ee3220079@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Drishti Gupta</td>
+<td style="text-align: center;">2021EE10649</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210649@ee.iitd.ac.in">ee1210649@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Praveen Srivastava</td>
+<td style="text-align: center;">2021EE10133</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210133@ee.iitd.ac.in">ee1210133@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Deepak Kumar</td>
+<td style="text-align: center;">2021EE10152</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210152@ee.iitd.ac.in">ee1210152@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Varshith Reddy Ryala</td>
+<td style="text-align: center;">2021EE10142</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210142@ee.iitd.ac.in">ee1210142@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Raswanth J</td>
+<td style="text-align: center;">2021EE30179</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210179@ee.iitd.ac.in">ee3210179@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Prisha Jain</td>
+<td style="text-align: center;">2021EE30330</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210330@ee.iitd.ac.in">ee3210330@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Garv Gupta</td>
+<td style="text-align: center;">2021MT60953</td>
+<td style="text-align: center;"><a
+href="mailto:mt6210953@maths.iitd.ac.in">mt6210953@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Sanjay Karela</td>
+<td style="text-align: center;">2012MT50616</td>
+<td style="text-align: center;"><a
+href="mailto:mt5120616@maths.iitd.ac.in">mt5120616@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Dhruv Nagpal</td>
+<td style="text-align: center;">2020EE11013</td>
+<td style="text-align: center;"><a
+href="mailto:ee1201013@ee.iitd.ac.in">ee1201013@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tab:teamDetails">
+<table>
+<caption>Research Team Members Details</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Entry No</th>
+<th style="text-align: center;">Email</th>
+<th style="text-align: center;">Role</th>
+<th style="text-align: center;"><span data-acronym-label="if"
+data-acronym-form="singular+abbrv">if</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Keshav Singhal</td>
+<td style="text-align: center;">2021EE10788</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210788@ee.iitd.ac.in">ee1210788@ee.iitd.ac.in</a></td>
+<td style="text-align: center;"><span data-acronym-label="ac"
+data-acronym-form="singular+abbrv">ac</span></td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Rishika Goel</td>
+<td style="text-align: center;">2021EE30725</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210725@ee.iitd.ac.in">ee3210725@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ridhima Gupta</td>
+<td style="text-align: center;">2021EE30719</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210719@ee.iitd.ac.in">ee3210719@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Diksha</td>
+<td style="text-align: center;">2021EE30717</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210717@ee.iitd.ac.in">ee3210717@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tushar Daima</td>
+<td style="text-align: center;">2021EE10688</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210688@ee.iitd.ac.in">ee1210688@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ridam Kumari</td>
+<td style="text-align: center;">2021EE10158</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210158@ee.iitd.ac.in">ee1210158@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Harsh Bagde</td>
+<td style="text-align: center;">2021EE10690</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210690@ee.iitd.ac.in">ee1210690@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Nidhish</td>
+<td style="text-align: center;">2021EE30176</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210176@ee.iitd.ac.in">ee3210176@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Priyal Jain</td>
+<td style="text-align: center;">2021MT60949</td>
+<td style="text-align: center;"><a
+href="mailto:mt6210949@maths.iitd.ac.in">mt6210949@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Aditya Thomas</td>
+<td style="text-align: center;">2021MT60944</td>
+<td style="text-align: center;"><a
+href="mailto:mt6210944@maths.iitd.ac.in">mt6210944@maths.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Pratibha Patel</td>
+<td style="text-align: center;">2021EE10681</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210681@ee.iitd.ac.in">ee1210681@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Divyansh Bhatnagar</td>
+<td style="text-align: center;">2021EE30721</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210721@ee.iitd.ac.in">ee3210721@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Siddhika Tailor</td>
+<td style="text-align: center;">2021EE10683</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210683@ee.iitd.ac.in">ee1210683@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Narendra Nath Sharma</td>
+<td style="text-align: center;">2021EE10695</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210695@ee.iitd.ac.in">ee1210695@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Stuti Anand</td>
+<td style="text-align: center;">2021EE30748</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210748@ee.iitd.ac.in">ee3210748@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Anish Gupta</td>
+<td style="text-align: center;">2021EE10663</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210663@ee.iitd.ac.in">ee1210663@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Dhruv Mittal</td>
+<td style="text-align: center;">2021EE10626</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210626@ee.iitd.ac.in">ee1210626@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Mridul Jagrat</td>
+<td style="text-align: center;">2021EE30182</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210182@ee.iitd.ac.in">ee3210182@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Abhishek Meena</td>
+<td style="text-align: center;">2021EE10172</td>
+<td style="text-align: center;"><a
+href="mailto:ee1210172@ee.iitd.ac.in">ee1210172@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Divyansh Bhatnagar</td>
+<td style="text-align: center;">2021EE30721</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210721@ee.iitd.ac.in">ee3210721@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Kinshuk Bansal</td>
+<td style="text-align: center;">2021EE30701</td>
+<td style="text-align: center;"><a
+href="mailto:ee3210701@ee.iitd.ac.in">ee3210701@ee.iitd.ac.in</a></td>
+<td style="text-align: center;">Member</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 class="unnumbered" id="section"></h1>
+<p><strong>Note: There are no members with <span data-acronym-label="if"
+data-acronym-form="singular+abbrv">if</span> less than 1.</strong></p>
+<div class="sidewaysfigure">
+<p><img src="mindmap.png" alt="image" /></p>
+</div>
+<h1 id="project-management-details">Project Management Details</h1>
+<h1
+id="motivated-design-synergizing-wet-cleaning-with-spray-washing">Motivated
+Design: Synergizing Wet Cleaning with Spray Washing</h1>
+<div class="figure*">
+
+</div>
+<p>Our inspiration for the Cotton Fabric Cleaning Machine stemmed from
+the client’s specific need to clean new white unbleached cotton fabric,
+emphasizing a packaging cleaning solution for fabric manufacturers. To
+meet these demands effectively, our design strategically integrates the
+proven benefits of Wet Cleaning with the advanced features of Spray
+Washing <span class="citation" data-cites="liu2019research"></span>.</p>
+<p>Motivated by the desire to optimize stain removal, fabric
+preservation, and overall <span data-acronym-label="Cleaning Efficacy"
+data-acronym-form="singular+short">Cleaning Efficacy</span>, we
+seamlessly blended Wet Cleaning’s non-toxic, biodegradable detergents
+with the precision of a Spray Washing Machine. This innovative approach
+not only addresses manufacturing impurities but also enhances the
+machine’s capabilities for odor removal and environmental
+friendliness.</p>
+<p>Understanding the importance of versatility, the design accommodates
+various cleaning methods, including water, dry, and air, ensuring
+adaptability to different fabric handling needs. The motivation to
+adhere to power load preferences further ensures cost-effectiveness and
+safety in operation.</p>
+<p>The user-centric design principles are rooted in the desire for
+efficiency and ease of operation. The 45-minute single cleaning cycle
+and a balanced machine size cater to the client’s need for practicality
+and a user-friendly experience.</p>
+<p>Economically driven, the design is cost-effective, aligning with
+budgetary constraints while adhering to environmental standards, as
+mandated by <span data-acronym-label="cpcb"
+data-acronym-form="singular+abbrv">cpcb</span> rules. In essence, our
+motivation behind this integrated design is to provide a holistic fabric
+care solution that not only meets but exceeds client expectations
+through the seamless synergy of Wet Cleaning and Spray Washing
+technologies.</p>
+<h1 id="requirements">Requirements</h1>
+<h2 id="input-requirements">Input Requirements</h2>
+<h3 id="water-requirements">Water Requirements:</h3>
+<p>To wash 11 kgs of cotton cloth, we will require around 80-90 liters
+of water.</p>
+<h3 id="detergent-requirements">Detergent Requirements:</h3>
+<p>Considering an 11 kg of cotton fabric, our design recommends using
+500 ml of Surf Excel Matic Front Load Liquid Detergent. With 5 liters of
+detergent, nearly 10-11 cotton fabrics can be efficiently washed, making
+it a cost-effective and resource-efficient choice.</p>
+<h3 id="input-requirements---summary">Input Requirements - Summary</h3>
+<div class="table*">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Key Consideration</strong></th>
+<th style="text-align: left;"><strong>Requirement</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Types of stains or fabrics the machine
+should be optimized for</td>
+<td style="text-align: left;">White unbleached Cotton fabric which has
+been just manufactured</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The intended user of the cleaning
+machine</td>
+<td style="text-align: left;">The entity who made the unbleached cotton
+fabric</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Desired fiber content of the fabrics</td>
+<td style="text-align: left;">Single ply, <span
+data-acronym-label="thread count"
+data-acronym-form="singular+short">thread count</span> 400 and <span
+data-acronym-label="Denier"
+data-acronym-form="singular+short">Denier</span> 60</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Types of yarn commonly used in the fabrics
+to be cleaned</td>
+<td style="text-align: left;">Cotton yarn</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maximum dimensions of the fabrics that the
+cleaning machine should accommodate</td>
+<td style="text-align: left;">10 meter length x 2 meters width</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fabric’s colorfastness to laundering</td>
+<td style="text-align: left;">Colours are fast, they do not run.
+Primarily the input is NOT coloured - white unbleached cotton cloth</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Specific requirements for <span
+data-acronym-label="Abrasion Resistance"
+data-acronym-form="singular+short">Abrasion Resistance</span>,
+especially for fabrics that may undergo frequent cleaning cycles</td>
+<td style="text-align: left;">None. Each fabric undergoes one cleaning
+and is then packed</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Minimum <span
+data-acronym-label="Tear Strength"
+data-acronym-form="singular+short">Tear Strength</span>
+specifications</td>
+<td style="text-align: left;">125 kg (<span
+data-acronym-label="Tensile Method Test"
+data-acronym-form="singular+short">Tensile Method Test</span>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Is <span
+data-acronym-label="Seam Slippage"
+data-acronym-form="singular+short">Seam Slippage</span> a critical
+factor, and if so, the acceptable levels for the fabrics</td>
+<td style="text-align: left;">No, the edges of the fabric are <span
+data-acronym-label="back-folded seams"
+data-acronym-form="singular+short">back-folded seams</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Flammability characteristics of the
+fabric</td>
+<td style="text-align: left;">Flammable if exposed to naked flame for
+more than 6 seconds</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stains/impurity industry specifically
+added during the manufacturing process that need to be cleaned</td>
+<td style="text-align: left;">No, stains are not deliberately added.
+Only impurities are the materials used to manufacture the cloth</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="output-requirements">Output Requirements</h2>
+<h3 id="drainage-system">Drainage System:</h3>
+<p>The size of the drainage pipe is chosen based on the expected flow
+rate of water and chemicals during the washing process. A larger valve
+allows for quicker drainage, which is particularly important in a
+commercial setting. Size: 2-3 inches in diameter (based on flow rate
+calculation). Material: Stainless steel or corrosion-resistant
+plastic.</p>
+<h3 id="ventilation">Ventilation:</h3>
+<p>We will be using the exhaust of around 4 inches in diameter
+considering the <span data-acronym-label="cfm"
+data-acronym-form="singular+abbrv">cfm</span>. Approximate space that
+the exhaust and duct will cover is 16x16 cm.</p>
+<h2 id="power-requirements">Power Requirements</h2>
+<h3 id="machine-power-use">Machine Power Use:</h3>
+<p>Pump for Nozzles, Motor of conveyor Belt, heating water, Control
+Panel(Timers, Sensors) Power Supply Needed - 180V - 240V Motor for
+conveyor belt: 74.57 Watt Pump for Nozzles: 1hp(745 Watt) (Approx value
+of power needed for pump to fulfill our need)</p>
+<h3 id="power-requirement-for-drying">Power requirement for drying:</h3>
+<p>Actual drying times and energy usage can vary based on factors such
+as the changing environmental factors and the moisture content of the
+cloth. According to our analysis of the thermodynamics of our system,
+the power required will be around 2000 watts.</p>
+<h2 id="logistical-requirements">Logistical Requirements</h2>
+<h3 id="adequate-space-for-the-entire-machine">Adequate space for the
+entire machine:</h3>
+<p>The machines need sufficient space for installation and proper
+functioning. The assembly would require approximately an area of 3x5
+meters</p>
+<h3 id="water-supply-connection">Water supply connection:</h3>
+<p>An essential logistical requirement for the washing process, the
+water supply ensures the availability of the medium for <span
+data-acronym-label="wet cleaning agent"
+data-acronym-form="singular+short">wet cleaning agent</span>s. 80-90
+Liters of water will be required for one batch</p>
+<h3 id="ventilation-for-efficient-drying">Ventilation for efficient
+drying:</h3>
+<p>Proper ventilation is crucial during the drying process to facilitate
+the efficient removal of moisture from the fabric.</p>
+<h2 id="environmental-requirements">Environmental Requirements</h2>
+<h3 id="good-ventilation-for-efficient-drying">Good ventilation for
+efficient drying:</h3>
+<p>Beyond its role in efficient drying, good ventilation also
+contributes to environmental considerations by optimizing energy
+efficiency during the <span data-acronym-label="tumble drying process"
+data-acronym-form="singular+short">tumble drying process</span>.</p>
+<h3 id="humidity-monitoring-system">Humidity monitoring system:</h3>
+<p>Machine’s efficiency depends a lot on the humidity levels so
+efficient humidity management through ventilation would be required</p>
+<h2 id="site-usage-site-requirements">Site (Usage Site)
+Requirements</h2>
+<h3 id="well-ventilated-space-for-drying">Well-ventilated space for
+drying:</h3>
+<p>The drying process requires a well-ventilated space to ensure optimal
+conditions for moisture removal.</p>
+<h3 id="access-to-water-and-power-supply">Access to water and power
+supply:</h3>
+<p>A necessary site requirement for the washing process, ensuring a
+constant supply of water for the <span
+data-acronym-label="wet cleaning agent"
+data-acronym-form="singular+short">wet cleaning agent</span>s.</p>
+<h3
+id="proper-installation-of-inner-components-in-machine-structures">Proper
+installation of inner components in machine structures:</h3>
+<p>Ensuring proper installation of inner components is vital for the
+overall functionality of the machines.</p>
+<h2 id="structural-requirements">Structural Requirements</h2>
+<h3 id="sturdy-housing-for-the-spray-washing-machine">Sturdy housing for
+the spray washing machine:</h3>
+<p>Sturdy housing is crucial to provide stability and durability for
+both machines. The rationale is to ensure the machines can withstand the
+mechanical movements and operational demands without compromising
+performance.</p>
+<h3
+id="adequate-support-for-inner-components-in-machine-structures">Adequate
+support for inner components in machine structures:</h3>
+<p>Proper support for inner components is necessary to prevent
+malfunctions and maintain the overall integrity of the machines. The
+rationale is to ensure that all components are well-supported and can
+perform their functions optimally.</p>
+<h2 id="time-requirements">Time Requirements</h2>
+<h3 id="design-time-requirement">Design Time Requirement:</h3>
+<p>Drawing insights from prevalent industry benchmarks in designing
+cleaning machines for unbleached cotton fabric, our objective is to
+streamline the design process within a timeframe of around 4 weeks. This
+aims not just to meet but to surpass contemporary design efficiency,
+employing innovative methodologies for optimal system performance.</p>
+<h3 id="time-to-market-requirements">Time to Market Requirements</h3>
+<p>Comparative analysis of industry timelines underscores the
+variability in design-to-market durations for cleaning machines. Our
+commitment is to adhere to or potentially outstrip these norms, ensuring
+our systems reach the market promptly to address evolving demands
+through precision and efficient collaboration.</p>
+<h3 id="life-time-requirements">Life Time Requirements</h3>
+<p>Acknowledging the diverse operational lifespans of machines in the
+industry, our focal point is to gain a competitive advantage by
+delivering robust systems with prolonged operational life. Through
+meticulous design and stringent quality assurance, our aim is to set new
+industry benchmarks in system longevity.</p>
+<h3 id="end-of-life-requirements">End of Life Requirements</h3>
+<p>In navigating the stages of disposal, recycling, and maintenance,
+industry practices exhibit variability. In our commitment to
+environmental responsibility, we envision surpassing standard
+guidelines. As the project progresses, our goal is to introduce
+procedures that not only meet but exceed existing industry standards,
+elevating the sustainability and lifecycle management of our
+systems.</p>
+<h2 id="other-non-functional-requirements">Other Non-functional
+Requirements</h2>
+<h3 id="safety">Safety:</h3>
+<p>Implementation of safety features such as emergency stop buttons and
+safety sensors. The rationale is to prioritize user safety during the
+operation of the machines, minimizing the risk of accidents or
+malfunctions.</p>
+<h3 id="serviceability">Serviceability:</h3>
+<p><span data-acronym-label="access panel"
+data-acronym-form="singular+short">access panel</span> provided for
+maintenance ease. The rationale is to facilitate easy maintenance and
+servicing, allowing technicians or users to access internal components
+for repairs or cleaning without significant disruption.</p>
+<h3 id="reliability">Reliability:</h3>
+<p>Consistent and reliable performance is essential for effective
+cleaning and drying. The rationale is to build machines that users can
+trust to deliver consistent results, meeting their fabric care needs
+reliably.</p>
+<h3 id="efficient-water-flow-regulation">Efficient Water Flow
+Regulation:</h3>
+<p>Control of water inflow and outflow for optimal usage. The rationale
+is to ensure that water is utilized efficiently during the washing
+process, contributing to resource conservation and
+cost-effectiveness.</p>
+<h3 id="turbidity-control">Turbidity Control:</h3>
+<p>Monitoring and control of water turbidity for effective cleaning. The
+rationale is to maintain the clarity of water during the washing
+process, enhancing the performance of <span
+data-acronym-label="wet cleaning agent"
+data-acronym-form="singular+short">wet cleaning agent</span>s and
+improving overall <span data-acronym-label="Cleaning Efficacy"
+data-acronym-form="singular+short">Cleaning Efficacy</span>.</p>
+<h3 id="inlet-and-outlet-timing">Inlet and Outlet Timing:</h3>
+<p>Optimal timings for water inlet and outlet during different phases of
+the cleaning process. The rationale is to synchronize water flow with
+specific stages of the cleaning cycle, optimizing the effectiveness of
+detergents and rinsing.</p>
+<h3 id="plc-for-operation-control"><span data-acronym-label="plc"
+data-acronym-form="singular+abbrv">plc</span> for Operation
+Control:</h3>
+<p>Use of a <span data-acronym-label="plc"
+data-acronym-form="singular+long">plc</span> for efficient operation
+control. The rationale is to implement advanced control systems that
+enhance the precision and automation of the cleaning and drying
+processes, ensuring consistent and controlled performance.</p>
+<h3 id="hmi-for-user-interface-and-monitoring"><span
+data-acronym-label="hmi" data-acronym-form="singular+abbrv">hmi</span>
+for User Interface and Monitoring:</h3>
+<p>Incorporation of a <span data-acronym-label="hmi"
+data-acronym-form="singular+long">hmi</span> for user-friendly
+interaction and monitoring. The rationale is to provide users with an
+intuitive interface to control and monitor the cleaning and drying
+processes, enhancing the overall user experience.</p>
+<h3 id="environmental-considerations">Environmental Considerations:</h3>
+<p>The overall system design takes into account environmental impact and
+sustainability, incorporating elements such as biodegradable detergents,
+<span data-acronym-label="effluent treatment"
+data-acronym-form="singular+short">effluent treatment</span>, and
+energy-efficient processes. The rationale is to align the system with
+modern environmental standards and practices.</p>
+<h3 id="effluent-treatment-system"><span
+data-acronym-label="effluent treatment"
+data-acronym-form="singular+short">effluent treatment</span>
+System:</h3>
+<p>Ensures responsible management of wastewater, minimizing
+environmental impact. The rationale is to address environmental concerns
+related to wastewater disposal and contribute to sustainable and
+responsible fabric care practices.</p>
+<h3 id="regular-cleaning-and-maintenance-time">Regular Cleaning and
+Maintenance Time:</h3>
+<p>Design includes provisions for regular cleaning and maintenance to
+prevent issues such as lint buildup and ensure long-term functionality.
+The rationale is to promote proactive maintenance, extending the
+operational life of the machines and preventing potential
+breakdowns.</p>
+<h2 id="chemical-cleaning-methods-mindmap">Chemical Cleaning Methods
+Mindmap</h2>
+<h1 id="specifications">Specifications</h1>
+<h2 id="energy-specifications">Energy Specifications</h2>
+<h3 id="water-nozzles">Water Nozzles:</h3>
+<ol>
+<li><p><strong>Pump for Nozzles:</strong> 1 hp (745 Watt) (Approximate
+value of power needed for pump to fulfill our need)</p></li>
+</ol>
+<h3 id="motor-and-conveyor-belt">Motor and Conveyor belt:</h3>
+<ol>
+<li><p>Total weight to be driven by motors = 1500 kg and speed =
+0.25 m <sup>−1</sup>, assuming coefficient of friction = 0.5, we get
+total pull = <span
+class="math inline">1500 × 0.25 × 0.5 = 200 kgm/min </span>
+(approximately, including margin).</p></li>
+<li><p>1 hp = 4500 kg m <sup>−1</sup></p></li>
+<li><p>Total weight of belt = 1500-3000 kg (Depending on thickness of
+the belt 5 mm-10 mm)</p></li>
+<li><p>Motor specifications = 0.08 - 0.1 horsepower for speed 25
+cm/min</p></li>
+<li><p>Energy requirements = 0.08 horse power motors running for 45-50
+minutes so energy requirement is 0.05 kWh per motor.</p></li>
+</ol>
+<h3 id="drying">Drying:</h3>
+<p>Actual drying times and energy usage can vary based on factors such
+as the changing environmental factors and the moisture content of the
+cloth. According to our analysis of the thermodynamics of our system,
+the power required will be around 2000 Watt.</p>
+<h3 id="exhaust-system-for-drying-chamber">Exhaust system for Drying
+chamber:</h3>
+<p>We would be requiring a Voltage-240V and Power Wattage-40 Watts</p>
+<h2 id="space-specifications">Space Specifications</h2>
+<h3 id="conveyor-belt">Conveyor belt:</h3>
+<ol>
+<li><p>Material for conveyor belt: general purpose rubber(density =
+1150 kg m<sup>−3</sup>) material</p></li>
+<li><p>Length = approximately 12 meters</p></li>
+<li><p>Width = 2.2 meters</p></li>
+<li><p>Thickness = 5-10 mm</p></li>
+</ol>
+<h3 id="machine-dimensions">Machine Dimensions:</h3>
+<ol>
+<li><p>2.2 meter wide</p></li>
+<li><p>1 meter in height</p>
+<ol>
+<li><p>Conveyor belt is approximately 0.5 meter above ground</p></li>
+<li><p>Water Nozzles and chemical sprays at a height of 0.5 meter above
+the conveyor belt</p></li>
+<li><p>Height of drying compartment is 0.5 meters</p></li>
+</ol></li>
+<li><p>3.5 m in length</p>
+<ol>
+<li><p>2.5 m conveyor belt for washing purpose</p></li>
+<li><p>Drying compartment having a length of 1 m</p></li>
+</ol></li>
+</ol>
+<h2 id="cost-specifications">Cost Specifications</h2>
+<h3 id="chemicals-used-for-washing">Chemicals used for washing:</h3>
+<ol>
+<li><p>For efficient and cost-effective washing, we recommend Surf Excel
+Matic Front Load Liquid Detergent. The estimated cost for washing one
+cloth, including 500 ml of detergent and 300 gm of soda ash for water
+softening, is Rs 142. This cost-effective solution ensures high-quality
+cleaning performance.</p></li>
+<li><p>Considering one cloth takes 500 ml of detergent. With 5 L of
+detergent nearly 10-11 cotton fabric can be washed. Cost of 500 ml Surf
+excel matic detergent is Rs 130 For 10 such clothes the cost requirement
+would be Rs 1300</p></li>
+<li><p>For 1 cloth: 500 ml of liquid detergent + 300 gm of soda ash, Rs
+130 + Rs 12 = Rs 142</p></li>
+</ol>
+<h3 id="water-nozzles-1">Water Nozzles:</h3>
+<p>Rs 300-500 per nozzle</p>
+<h3 id="motor-and-conveyor-belt-1">Motor and Conveyor Belt:</h3>
+<ol>
+<li><p>Cost of belt is 4500 Rs per meter(2 m wide) so total = 50,000 for
+10-11 meters</p></li>
+<li><p>Cost of a motor is Rs 5000</p></li>
+</ol>
+<h3 id="heating-element-cost">Heating Element Cost:</h3>
+<p>Nichrome is a cost-effective heating element compared to other
+alternatives like copper. The specific alloy composition and
+manufacturing processes can influence the cost, but overall, it offers a
+balance between efficiency and affordability. The cost can be estimated
+to 1,800 per kg.</p>
+<h3 id="rollers-cost">Rollers Cost:</h3>
+<p>Rs 15,000 per piece. The cost may vary as we change the diameter of
+the roller. We would need 9 cm and 21 cm diameter. We need stainless
+steel rollers because they are resistant to corrosion, can be easily
+fabricated, and offer good mechanical properties over a wide range of
+temperatures.</p>
+<h3 id="exhaust-cost">Exhaust cost:</h3>
+<p>The exhaust costs around Rs 1800 and duct that will be made of
+aluminum will cost Rs 720.</p>
+<h3 id="software-cost">Software cost:</h3>
+<p>We are using FreeCAD for <span data-acronym-label="cad"
+data-acronym-form="singular+abbrv">cad</span> drawings and simulation so
+cost of software is zero.</p>
+<h2 id="performance-specifications">Performance Specifications</h2>
+<h3 id="chemicals-used-for-washing-1">Chemicals used for washing:</h3>
+<ol>
+<li><p><strong>Soft or Hard Water Considerations:</strong> To address
+water hardness, our design incorporates soda ash for effective water
+softening. Estimations for soda ash usage are tailored to the water
+hardness levels, ensuring optimal washing performance.</p></li>
+<li><p><strong>Estimation for soda ash usage:</strong></p>
+<ol>
+<li><p><strong>Light Hardness (0-3 grains per gallon):</strong> No
+additional soda ash may be needed for water softening.</p></li>
+<li><p><strong>Moderate Hardness (3-7 grains per gallon):</strong> For
+an 11 kg load of cotton clothes, we consider using approximately 60 to
+180 gm of soda ash.</p></li>
+<li><p><strong>Hard Water (7-10 grains per gallon or more):</strong> In
+the case of hard water, we use approximately 180 to 300 gm of soda ash
+for an 11 kg load of cotton clothes. Price of soda ash in market = Rs 40
+per kg</p></li>
+</ol></li>
+<li><p><strong>Safety Standards and Environment Guidelines:</strong> Our
+washing machine design prioritizes safety and environmental
+sustainability. Compatibility with Surf Excel detergent is backed by
+rigorous safety assessments conducted by <span data-acronym-label="seac"
+data-acronym-form="singular+short">seac</span> under Hindustan Unilever
+Limited. The design complies with industry safety and quality standards,
+emphasizing our commitment to meeting established benchmarks.</p></li>
+</ol>
+<h3 id="water-nozzles-2">Water Nozzles:</h3>
+<ol>
+<li><p><strong>Nozzles for the main wash:</strong> For this task
+high-impact flat fan nozzles or tongue-type nozzles are required. The
+spray angle should be 30 to 45 degrees. Due to their sharp jet,
+tongue-type nozzles are ideally suited for low pressure. High-pressure
+flat fan nozzles differ from low-pressure nozzles by virtue of their
+hardened nozzle mouthpiece, which gives these nozzles a longer service
+life. Nozzles for the main wash belong to Series 688/689, they are hard,
+sharp flat fan, narrowly delimited jet pattern and not prone to
+clogging.</p></li>
+<li><p><strong>Nozzles for rinsing:</strong> Rinsing is the last stage
+before drying and it requires small droplets that run off the vehicle
+quickly. Application of flat fan nozzles with a very low flow rate in
+most cases is suitable. Nozzles are easy to align in conjunction with a
+bayonet cap and a ball joint along with accessories and rinsing eyelet
+clamps/retaining nuts.</p></li>
+</ol>
+<h3 id="drainage-system-1"> Drainage system: </h3>
+<ol>
+<li><p><strong>Valve Size</strong></p>
+<ol>
+<li><p> <strong>Diameter:</strong> 2-3 inches</p></li>
+<li><p> <strong>Material:</strong> Stainless steel or
+corrosion-resistant plastic</p></li>
+<li><p> <strong>Location:</strong> Lowest point, downstream of wash
+chamber</p></li>
+</ol></li>
+<li><p><strong>Material and Durability</strong></p>
+<ol>
+<li><p> <strong>Material:</strong> <span data-acronym-label="hdpe"
+data-acronym-form="singular+abbrv">hdpe</span> or <span
+data-acronym-label="pvc"
+data-acronym-form="singular+abbrv">pvc</span></p></li>
+<li><p> <strong>Diameter:</strong> 1.5-2 inches (matching valve
+size)</p></li>
+<li><p> <strong>Layout:</strong> Sloped at least 1% towards the
+valve</p></li>
+<li><p> <strong>Connections:</strong> Solvent-welded or flanged</p></li>
+</ol></li>
+<li><p><strong>Parameters for Drainage System Design</strong></p>
+<ol>
+<li><p> <strong>Flow Rate:</strong></p>
+<ol>
+<li><p> <strong>Residential:</strong> 50 L/min</p></li>
+<li><p> <strong>Commercial:</strong> 100 L/min</p></li>
+</ol></li>
+<li><p> <strong>Peak Flow Handling:</strong> Consider safety
+margin</p></li>
+<li><p> <strong>Gravity and Inclination</strong></p>
+<ol>
+<li><p> <strong>Incline:</strong> 1-2% slope</p></li>
+<li><p> <strong>Material Selection:</strong> Corrosion-resistant
+materials</p></li>
+<li><p> <strong>Accessibility:</strong> Easily accessible inclined
+surfaces for maintenance</p></li>
+</ol></li>
+</ol></li>
+</ol>
+<h2 id="prototype-specifications">Prototype Specifications</h2>
+<h2 id="milestone-specifications">Milestone Specifications</h2>
+<h3 id="milestone-1">Milestone 1:</h3>
+<p>Develop a comprehensive <span data-acronym-label="cad"
+data-acronym-form="singular+short">cad</span> model that precisely
+outlines the trajectory of the cloth within the cleaning machine.</p>
+<h3 id="milestone-2">Milestone 2:</h3>
+<p>⁠ Refine the <span data-acronym-label="cad"
+data-acronym-form="singular+abbrv">cad</span> design to incorporate
+well-defined structures for seamless integration of auxiliary
+components, such as water and chemical inputs, and an efficient drainage
+system.</p>
+<h3 id="milestone-3">Milestone 3:</h3>
+<p>Synthesize the comprehensive <span data-acronym-label="cad"
+data-acronym-form="singular+abbrv">cad</span> model with the intricate
+electrical system and circuitry required for the cleaning machine.
+Electrical assembly and designing of <span data-acronym-label="hmi"
+data-acronym-form="singular+abbrv">hmi</span>.</p>
+<h3 id="milestone-4">Milestone 4:</h3>
+<p>Fabricate the final prototype of the cleaning machine, incorporating
+all finalized <span data-acronym-label="cad"
+data-acronym-form="singular+abbrv">cad</span> designs and electrical
+components.</p>
+<h1 class="unnumbered" id="section-1"></h1>
+<h1 class="unnumbered" id="section-2"></h1>
+<div class="appendices">
+<h1 id="appendix-1-document-id">Appendix 1: Document ID</h1>
+<ol>
+<li><p>Document Type: Private Release</p></li>
+<li><p>Document Authorised by: Subrat Kar, Instructor (<a
+href="mailto:subrat@ee.iitd.ac.in">subrat@ee.iitd.ac.in</a>)</p></li>
+<li><p>Publication Date: 13 Jan 2023</p></li>
+<li><p>Version Number: 1.4</p></li>
+<li><p>Github Repository Details:</p></li>
+</ol>
+<h1 id="appendix-2-document-statistics">Appendix 2: Document
+Statistics</h1>
+<ul>
+<li><p>Word Count: 2272</p></li>
+<li><p>Number of Sentences: 397</p></li>
+<li><p>Number of Characters: 14189</p></li>
+</ul>
+<h1 id="appendix-3-readability-indices">Appendix 3: Readability
+Indices</h1>
+<ul>
+<li><p><strong>Readability Index<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>:</strong> 27.4</p></li>
+<li><p><strong>Gunning-Fog Index<a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"><sup>2</sup></a>:</strong> 15.43</p></li>
+<li><p><strong>Flesch Reading Ease<a href="#fn3" class="footnote-ref"
+id="fnref3" role="doc-noteref"><sup>3</sup></a>:</strong> 27.4</p></li>
+<li><p><strong>Coleman Liau Index<a href="#fn4" class="footnote-ref"
+id="fnref4" role="doc-noteref"><sup>4</sup></a>:</strong> 10</p></li>
+</ul>
+</div>
+<section class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>The readability index indicates the
+approximate reading grade level of a text. The formula takes into
+account sentence length and word length. It is based on a 0-100 scale. A
+high score means that the text is easier to read.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>On a scale from 0 -20, the
+Gunning-Fog Index is a weighted average of the number of words per
+sentence and the number of long words per word. This can be understood
+as the text can be understood by someone who left full-time education at
+a later age than the index. Hence a lower Gunning-Fog index is easier to
+read.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>This index is the same as the
+readability index.<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>On a scale of 0 - 17+, the Coleman
+Liau Index relies on characters and calculates the index based on the
+number of characters in a word and the number of words in a sentence.
+The score of the text indicates the US school level a person needs to
+understand the text.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
