@@ -11,7 +11,6 @@ markmap:
 
 ## Project Management Details
 
-- Workflow
 - WBS
 - Tabular Gantt Chart
 - Gantt Chart
@@ -41,8 +40,13 @@ markmap:
 - Space Specifications
 - Cost Specifications
 - Performance Specifications
+- Manpower Specifications
 - Prototype Specifications
 - Milestone Specifications
+
+## Design Cycle 1
+
+- Engineering Drawings
 
 ## Appendices
 
